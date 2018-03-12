@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET customizations listing. */
 router.get('/', function(req, res, next) {
-  res.render('customizations', {title: 'Customizations'});
+  res.render('pages/customizations', {title: 'Customizations'});
 });
 
 /* GET skins route */
