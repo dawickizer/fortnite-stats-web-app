@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET loot listing. */
 router.get('/', function(req, res, next) {
-  res.render('loot', { title: 'Loot Stats' });
+  res.render('pages/loot', { title: 'Loot Stats', active: 'loot' });
 });
 
 /* GET weapons route */

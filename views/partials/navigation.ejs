@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">
+    <img src="https://cdn2.unrealengine.com/Fortnite%2Fsearch-for-survivors%2FsignupBanner-155x221-7d1f31411baf91e6cadf490c6f60f98a72b38b4c.png" width="30" height="30" class="d-inline-block align-top" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li id="home" class="nav-item">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li id="loot" class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="/loot" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Loot
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/loot/weapons">Weapons</a>
+          <a class="dropdown-item" href="/loot/healing">Healing</a>
+          <a class="dropdown-item" href="/loot/specials">Specials</a>
+          <a class="dropdown-item" href="/loot/materials">Materials</a>
+          <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/loot">Loot Page</a>
+        </div>
+      </li>
+      <li id="customizations" class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="/customizations" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Customizations
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/customizations/skins">Skins</a>
+          <a class="dropdown-item" href="/customizations/pickaxes">Pickaxes</a>
+          <a class="dropdown-item" href="/customizations/gliders">Gliders</a>
+          <a class="dropdown-item" href="/customizations/backpacks">Backpacks</a>
+          <a class="dropdown-item" href="/customizations/taunts">Taunts</a>
+          <a class="dropdown-item" href="/customizations/stickers">Stickers</a>
+          <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/customizations">Customizations Page</a>
+        </div>
+      <li id="dropzones" class="nav-item">
+        <a class="nav-link" href="/dropzones">Dropzones</a>
+      </li>
+      <li id="challenges" class="nav-item">
+        <a class="nav-link" href="/challenges">Challenges</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<!-- Dynamically set active page to the current page -->
+<script>document.getElementById("<%=active%>").className = document.getElementById("<%=active%>").className + " active";</script>
+
+
