@@ -1,0 +1,69 @@
+Weapon
+-----------
+
+Meta Data
+----------
+id: generated from db probably
+image: String
+name: String
+type: String
+tier: String
+
+Range
+---------------
+closeRange: num
+midRange: num
+longRange: num
+maxRange: num
+
+Damage
+-------
+damagePerSecond: num
+bodyDamageClose: num
+headDamageClose: num
+bodyDamageMid: num
+headDamageMid: num
+bodyDamageLong: num
+headDamageLong: num
+bodyDamageMax: num
+headDamageMax: num
+
+impactDamageClose: num
+impactDamageMid: num
+impactDamageLong: num
+impactDamageMax: num
+
+environmentalDamageClose: num
+environmentalDamageMid: num
+environmentalDamageLong: num
+environmentalDamageMax: num
+
+Spread
+---------------
+baseSpread: num
+sprintingSpread: num
+falling-jumping-Spread: num
+adsSpread: num
+standingSpread: num
+crouchingSpread: num
+
+Recoil
+-----------
+horizontalRecoil: num
+horizontalRecoilGamepad: num
+verticalRecoil: num
+verticalRecoilGamepad: num
+angleMax: num
+angleMin: num
+downsightsRecoil: num
+interpSpeed: num
+interpSpeedRecovery: num
+
+fireRate: num
+reloadTime: num
+magazineSize: num
+
+Loot Chance
+--------------------
+floorLootChance: num
+chestLootChance: num
