@@ -2,8 +2,10 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-image: url("https://i.kinja-img.com/gawker-media/image/upload/t_original/eydhq5o0navgbajua3my.png");
   background-size: cover;
+  color : white;
 }
 
+/* Navbar customizations */
 .bg-light { 
     background-color: #2a2a2a !important;
 }

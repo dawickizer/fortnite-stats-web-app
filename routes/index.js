@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('pages/index', { title: 'Fortnite Stats', active: 'home' });
+  res.render('pages/index', { title: 'Fortnite | Home', active: 'home' });
 });
 
 module.exports = router;

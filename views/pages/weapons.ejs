@@ -1,0 +1,8 @@
+<% include ../partials/header %>
+<% include ../partials/navigation %>
+<p>This is the /loot/weapons page</p>
+<% for (var i = 0; i < weapons.length; i ++) { %>
+    <%= weapons[i].name + " " + weapons[i].tier %>
+    </br> 
+<% } %>
+<% include ../partials/footer %>
