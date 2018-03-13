@@ -22,14 +22,14 @@ var db = mongoose.connection;
 mongoose.connection.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 // Test adding to DB
-Testing.create({
-    name: "Burst",
-    number: -1
-  },
-  function (err, small) {
-    if (err) console.log(err);
-    // saved!
-});
+// Testing.create({
+//     name: "Burst",
+//     number: -1
+//   },
+//   function (err, small) {
+//     if (err) console.log(err);
+//     // saved!
+// });
 
 
 // Create weapon document in Database
