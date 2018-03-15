@@ -34,6 +34,7 @@ mongoose.connection.on('error', console.error.bind(console, 'MongoDB connection 
 // Create common assault-rifle-burst weapon document in Database
 Weapon.create({
     image: "/public/images/weapons/assault-rifle-burst.png",
+    fullName: "assault-rifle-burst-common",
     name: "assault-rifle-burst",
     type: "assault-rifle",
     tier: "common",
@@ -88,6 +89,7 @@ Weapon.create({
 // Create uncommon assault-rifle-burst weapon document in Database
 Weapon.create({
     image: "/public/images/weapons/assault-rifle-burst.png",
+    fullName: "assault-rifle-burst-uncommon",
     name: "assault-rifle-burst",
     type: "assault-rifle",
     tier: "uncommon",
@@ -142,6 +144,7 @@ Weapon.create({
 // Create rare assault-rifle-burst weapon document in Database
 Weapon.create({
     image: "/public/images/weapons/assault-rifle-burst.png",
+    fullName: "assault-rifle-burst-rare",
     name: "assault-rifle-burst",
     type: "assault-rifle",
     tier: "rare",
@@ -196,6 +199,7 @@ Weapon.create({
 // Create common m4 weapon document in Database
 Weapon.create({
     image: "/public/images/weapons/assault-rifle-m4.png",
+    fullName: "assault-rifle-m4-common",
     name: "assault-rifle-m4",
     type: "assault-rifle",
     tier: "common",
@@ -250,6 +254,7 @@ Weapon.create({
 // Create uncommon m4 weapon document in Database
 Weapon.create({
     image: "/public/images/weapons/assault-rifle-m4.png",
+    fullName: "assault-rifle-m4-uncommon",
     name: "assault-rifle-m4",
     type: "assault-rifle",
     tier: "uncommon",
@@ -304,6 +309,7 @@ Weapon.create({
 // Create rare m4 weapon document in Database
 Weapon.create({
     image: "/public/images/weapons/assault-rifle-m4.png",
+    fullName: "assault-rifle-m4-rare",
     name: "assault-rifle-m4",
     type: "assault-rifle",
     tier: "rare",

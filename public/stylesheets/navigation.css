@@ -1,0 +1,28 @@
+.bg-light { 
+    background-color: #2a2a2a !important;
+}
+
+.btn-outline-success {
+  color: #c272d9;
+  background-color: transparent;
+  background-image: none;
+  border-color: #c272d9;
+}
+
+.btn-outline-success:hover {
+  color: #fff;
+  background-color: #c272d9;
+  border-color: #c272d9;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #ccc;
+}
+
+.navbar-light .navbar-nav .active>.nav-link {
+    color: #c272d9;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #c272d9;
+}

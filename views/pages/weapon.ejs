@@ -3,11 +3,8 @@
 
 <!-- Container element -->
 <div class="parallax">
-  <p>This is the loot/weapons page</p>
-  <% for (var i = 0; i < weapons.length; i ++) { %>
-    <a href="/loot/weapons/<%= weapons[i].fullName %>"><%= weapons[i].fullName %></a>
-    </br> 
-  <% } %>
+  <p>This is the /loot/weapons/<%= weapon.fullName %> page</p>
+  <p><%= weapon %></p>
 </div>
 
 <div style="height:500px;background-color:red;font-size:36px">
@@ -15,8 +12,7 @@ Scroll Up and Down this page to see the parallax scrolling effect.
 This div is just here to enable scrolling.
 Tip: Try to remove the background-attachment property to remove the scrolling effect.
 </div>
+
 <% include ../partials/footer %>
-
-
 
 

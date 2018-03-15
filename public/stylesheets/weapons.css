@@ -1,0 +1,20 @@
+@import './navigation.css';
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color : white;
+}
+
+.parallax { 
+    /* The image used */
+    background-image: url("https://y4j7y8s9.ssl.hwcdn.net/wp-content/uploads/2018/03/Fortnite_BR_Screenshot_1920x1080_50v50_EN.jpg");
+
+    /* Set a specific height */
+    height: 700px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

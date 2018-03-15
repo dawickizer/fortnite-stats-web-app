@@ -19,9 +19,15 @@ router.get('/weapons', function(req, res, next) {
 });
 
 /* GET weapons/:weaponName listing. */
-router.get('/weapons/:weaponName', function(req, res, next) {
+router.get('/weapons/:name', function(req, res, next) {
+  
   console.log(req.params);
-  res.send('This is the loot/weapons/' + req.params.weaponName + ' page!');
+
+  // Find weapon with fullName matching req.params.name
+  Weapon.findOne({ 'fullName': req.params.name }, function (err, weapon) {
+    if (err) console.log(err);
+    else res.render('pages/weapon', { title: 'Fortnite | ' + req.params.name, active: 'loot', weapon: weapon });
+  });
 });
 
 
