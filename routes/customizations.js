@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET customizations listing. */
 router.get('/', function(req, res, next) {
-  res.render('pages/customizations', {title: 'Fortnite | Customizations', active: 'customizations'});
+  res.render('pages/customizations', {title: 'Fortnite | Customizations', active: 'customizations', style: 'customizations'});
 });
 
 /* GET skins route */

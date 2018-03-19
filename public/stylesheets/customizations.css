@@ -1,6 +1,5 @@
 @import './navigation.css';
 @import './path-widget.css';
-@import './rarity-backgrounds.css';
 
 body {
   background-image: linear-gradient(to bottom,rgba(0,0,0,.4),rgba(0,0,0,.8) 405px), url("/images/background/fortnite-battle.jpg");
@@ -13,7 +12,7 @@ body {
 .container {
   position: relative;
   width: 100%;
-  padding-top: 120px;
+  padding-top: 25px;
 }
 
 .image {
@@ -43,4 +42,5 @@ body {
 .col-lg-3:hover .middle {
   opacity: 1;
 }
+
 

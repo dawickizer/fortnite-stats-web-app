@@ -1,0 +1,25 @@
+#path {
+  padding-top: 25px;
+}
+
+#path-active {
+  color: #c272d9;
+}
+
+.path {
+  background-color: #2a2a2a;
+  font: 35px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: white;
+  padding: 20px;
+  
+}
+
+a {
+  color: white;
+  
+}
+
+a:hover {
+  color: white;
+  
+}

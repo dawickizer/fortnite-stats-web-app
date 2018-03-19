@@ -5,7 +5,7 @@ var Weapon = require('../models/loot/weapon');
 
 /* GET loot listing. */
 router.get('/', function(req, res, next) {
-  res.render('pages/loot', { title: 'Fortnite | Loot', active: 'loot' });
+  res.render('pages/loot', { title: 'Fortnite | Loot', active: 'loot', style: 'loot' });
 });
 
 /* GET weapons route */
@@ -14,7 +14,7 @@ router.get('/weapons', function(req, res, next) {
   // Get weapons from database and send them to /loot/weapons route to be displayed on weapons.ejs
   Weapon.find({}, function (err, weapons) {
     if (err) console.log(err); 
-    else res.render('pages/weapons', { title: 'Fortnite | Weapons', active: 'loot', weapons: weapons });
+    else res.render('pages/weapons', { title: 'Fortnite | Weapons', active: 'loot', style: 'weapons', weapons: weapons });
   });
 });
 
@@ -26,7 +26,7 @@ router.get('/weapons/:name', function(req, res, next) {
   // Find weapon with fullName matching req.params.name
   Weapon.findOne({ 'fullName': req.params.name }, function (err, weapon) {
     if (err) console.log(err);
-    else res.render('pages/weapon', { title: 'Fortnite | ' + req.params.name, active: 'loot', weapon: weapon });
+    else res.render('pages/weapon', { title: 'Fortnite | ' + req.params.name, active: 'loot', style: 'weapon', weapon: weapon });
   });
 });
 
