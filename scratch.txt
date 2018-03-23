@@ -67,3 +67,17 @@ Loot Chance
 --------------------
 floorLootChance: num
 chestLootChance: num
+
+
+
+
+Name of weapon
+Common
+Uncommon 
+Rare
+Epic
+Legendary
+Body Damage
+Head Damage
+Reload Time
+Magazine Size

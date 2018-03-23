@@ -9,6 +9,7 @@ var WeaponSchema = new Schema(
     name: {type: String, required: true},
     type: {type: String, required: true},
     tier: {type: String, required: true},
+    tierValue: {type: Number, required: true},
     closeRange: {type: Number, required: true},
     midrange: {type: Number, required: true},
     longRange: {type: Number, required: true},

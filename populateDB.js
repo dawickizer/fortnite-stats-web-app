@@ -33,11 +33,12 @@ mongoose.connection.on('error', console.error.bind(console, 'MongoDB connection 
 
 // Create common assault-rifle-burst weapon document in Database
 Weapon.create({
-    image: "/public/images/weapons/assault-rifle-burst.png",
+    image: "/images/weapons/assault-rifle-burst.png",
     fullName: "assault-rifle-burst-common",
     name: "assault-rifle-burst",
     type: "assault-rifle",
     tier: "common",
+    tierValue: 0,
     closeRange: 1,
     midrange: 1,
     longRange: 1,
@@ -88,11 +89,12 @@ Weapon.create({
 
 // Create uncommon assault-rifle-burst weapon document in Database
 Weapon.create({
-    image: "/public/images/weapons/assault-rifle-burst.png",
+    image: "/images/weapons/assault-rifle-burst.png",
     fullName: "assault-rifle-burst-uncommon",
     name: "assault-rifle-burst",
     type: "assault-rifle",
     tier: "uncommon",
+    tierValue: 1,
     closeRange: 1,
     midrange: 1,
     longRange: 1,
@@ -143,11 +145,12 @@ Weapon.create({
 
 // Create rare assault-rifle-burst weapon document in Database
 Weapon.create({
-    image: "/public/images/weapons/assault-rifle-burst.png",
+    image: "/images/weapons/assault-rifle-burst.png",
     fullName: "assault-rifle-burst-rare",
     name: "assault-rifle-burst",
     type: "assault-rifle",
     tier: "rare",
+    tierValue: 2,
     closeRange: 1,
     midrange: 1,
     longRange: 1,
@@ -198,11 +201,12 @@ Weapon.create({
 
 // Create common m4 weapon document in Database
 Weapon.create({
-    image: "/public/images/weapons/assault-rifle-m4.png",
+    image: "/images/weapons/assault-rifle-m4.png",
     fullName: "assault-rifle-m4-common",
     name: "assault-rifle-m4",
     type: "assault-rifle",
     tier: "common",
+    tierValue: 0,
     closeRange: 1,
     midrange: 1,
     longRange: 1,
@@ -253,11 +257,12 @@ Weapon.create({
 
 // Create uncommon m4 weapon document in Database
 Weapon.create({
-    image: "/public/images/weapons/assault-rifle-m4.png",
+    image: "/images/weapons/assault-rifle-m4.png",
     fullName: "assault-rifle-m4-uncommon",
     name: "assault-rifle-m4",
     type: "assault-rifle",
     tier: "uncommon",
+    tierValue: 1,
     closeRange: 1,
     midrange: 1,
     longRange: 1,
@@ -308,11 +313,242 @@ Weapon.create({
 
 // Create rare m4 weapon document in Database
 Weapon.create({
-    image: "/public/images/weapons/assault-rifle-m4.png",
+    image: "/images/weapons/assault-rifle-m4.png",
     fullName: "assault-rifle-m4-rare",
     name: "assault-rifle-m4",
     type: "assault-rifle",
     tier: "rare",
+    tierValue: 2,
+    closeRange: 1,
+    midrange: 1,
+    longRange: 1,
+    maxRange: 250000,
+    damagePerSecond: 181.5,
+    bodyDamageClose: 33,
+    headDamageClose: 66,
+    bodyDamageMid: 33,
+    headDamageMid: 66,
+    bodyDamageLong: 33,
+    headDamageLong: 66,
+    bodyDamageMax: 33,
+    headDamageMax: 66,
+    impactDamageClose: 28,
+    impactDamageMid: 28,
+    impactDamageLong: 28,
+    impactDamageMax: 28,
+    environmentalDamageClose: 33,
+    environmentalDamageMid: 33,
+    environmentalDamageLong: 33,
+    environmentalDamageMax: 33,
+    baseSpread: .15,
+    sprintSpread: 1.5,
+    fallingJumpingSpread: 1.25,
+    adsSpread: .6,
+    standingSpread: .55,
+    crouchingSpread: .8,
+    horizontalRecoil: 0.25,
+    horizontalRecoilGamepad: 1,
+    verticalRecoil: 3.325,
+    verticalRecoilGamepad: .5,
+    angleMax: 25,
+    angleMin: -25,
+    adsRecoil: .5,
+    interpSpeed: 12,
+    interpSpeedRecovery: 6,
+    fireRate: 5.5,
+    reloadTime: 2.2,
+    magazineSize: 30,
+    floorLootChance: .104,
+    chestLootChance: .104,
+    supplyDropLootChance: 0
+  },
+  function (err, small) {
+    if (err) console.log(err);
+    // saved!
+});
+
+
+
+
+
+
+
+// Create rare m4 weapon document in Database
+Weapon.create({
+    image: "/images/weapons/tactical-shotgun.png",
+    fullName: "tactical-shotgun-epic",
+    name: "tactical-shotgun",
+    type: "shotgun",
+    tier: "epic",
+    tierValue: 3,
+    closeRange: 1,
+    midrange: 1,
+    longRange: 1,
+    maxRange: 250000,
+    damagePerSecond: 181.5,
+    bodyDamageClose: 33,
+    headDamageClose: 66,
+    bodyDamageMid: 33,
+    headDamageMid: 66,
+    bodyDamageLong: 33,
+    headDamageLong: 66,
+    bodyDamageMax: 33,
+    headDamageMax: 66,
+    impactDamageClose: 28,
+    impactDamageMid: 28,
+    impactDamageLong: 28,
+    impactDamageMax: 28,
+    environmentalDamageClose: 33,
+    environmentalDamageMid: 33,
+    environmentalDamageLong: 33,
+    environmentalDamageMax: 33,
+    baseSpread: .15,
+    sprintSpread: 1.5,
+    fallingJumpingSpread: 1.25,
+    adsSpread: .6,
+    standingSpread: .55,
+    crouchingSpread: .8,
+    horizontalRecoil: 0.25,
+    horizontalRecoilGamepad: 1,
+    verticalRecoil: 3.325,
+    verticalRecoilGamepad: .5,
+    angleMax: 25,
+    angleMin: -25,
+    adsRecoil: .5,
+    interpSpeed: 12,
+    interpSpeedRecovery: 6,
+    fireRate: 5.5,
+    reloadTime: 2.2,
+    magazineSize: 30,
+    floorLootChance: .104,
+    chestLootChance: .104,
+    supplyDropLootChance: 0
+  },
+  function (err, small) {
+    if (err) console.log(err);
+    // saved!
+});
+
+// Create rare m4 weapon document in Database
+Weapon.create({
+    image: "/images/weapons/pump-shotgun.png",
+    fullName: "pump-shotgun-uncommon",
+    name: "pump-shotgun",
+    type: "shotgun",
+    tier: "uncommon",
+    tierValue: 1,
+    closeRange: 1,
+    midrange: 1,
+    longRange: 1,
+    maxRange: 250000,
+    damagePerSecond: 181.5,
+    bodyDamageClose: 33,
+    headDamageClose: 66,
+    bodyDamageMid: 33,
+    headDamageMid: 66,
+    bodyDamageLong: 33,
+    headDamageLong: 66,
+    bodyDamageMax: 33,
+    headDamageMax: 66,
+    impactDamageClose: 28,
+    impactDamageMid: 28,
+    impactDamageLong: 28,
+    impactDamageMax: 28,
+    environmentalDamageClose: 33,
+    environmentalDamageMid: 33,
+    environmentalDamageLong: 33,
+    environmentalDamageMax: 33,
+    baseSpread: .15,
+    sprintSpread: 1.5,
+    fallingJumpingSpread: 1.25,
+    adsSpread: .6,
+    standingSpread: .55,
+    crouchingSpread: .8,
+    horizontalRecoil: 0.25,
+    horizontalRecoilGamepad: 1,
+    verticalRecoil: 3.325,
+    verticalRecoilGamepad: .5,
+    angleMax: 25,
+    angleMin: -25,
+    adsRecoil: .5,
+    interpSpeed: 12,
+    interpSpeedRecovery: 6,
+    fireRate: 5.5,
+    reloadTime: 2.2,
+    magazineSize: 30,
+    floorLootChance: .104,
+    chestLootChance: .104,
+    supplyDropLootChance: 0
+  },
+  function (err, small) {
+    if (err) console.log(err);
+    // saved!
+});
+
+// Create rare m4 weapon document in Database
+Weapon.create({
+    image: "/images/weapons/pistol.png",
+    fullName: "pistol-rare",
+    name: "pistol",
+    type: "pistol",
+    tier: "rare",
+    tierValue: 2,
+    closeRange: 1,
+    midrange: 1,
+    longRange: 1,
+    maxRange: 250000,
+    damagePerSecond: 181.5,
+    bodyDamageClose: 33,
+    headDamageClose: 66,
+    bodyDamageMid: 33,
+    headDamageMid: 66,
+    bodyDamageLong: 33,
+    headDamageLong: 66,
+    bodyDamageMax: 33,
+    headDamageMax: 66,
+    impactDamageClose: 28,
+    impactDamageMid: 28,
+    impactDamageLong: 28,
+    impactDamageMax: 28,
+    environmentalDamageClose: 33,
+    environmentalDamageMid: 33,
+    environmentalDamageLong: 33,
+    environmentalDamageMax: 33,
+    baseSpread: .15,
+    sprintSpread: 1.5,
+    fallingJumpingSpread: 1.25,
+    adsSpread: .6,
+    standingSpread: .55,
+    crouchingSpread: .8,
+    horizontalRecoil: 0.25,
+    horizontalRecoilGamepad: 1,
+    verticalRecoil: 3.325,
+    verticalRecoilGamepad: .5,
+    angleMax: 25,
+    angleMin: -25,
+    adsRecoil: .5,
+    interpSpeed: 12,
+    interpSpeedRecovery: 6,
+    fireRate: 5.5,
+    reloadTime: 2.2,
+    magazineSize: 30,
+    floorLootChance: .104,
+    chestLootChance: .104,
+    supplyDropLootChance: 0
+  },
+  function (err, small) {
+    if (err) console.log(err);
+    // saved!
+});
+
+// Create rare m4 weapon document in Database
+Weapon.create({
+    image: "/images/weapons/assault-rifle-scar.png",
+    fullName: "assault-rifle-scar-legendary",
+    name: "assault-rifle-scar",
+    type: "assault-rifle",
+    tier: "legendary",
+    tierValue: 4,
     closeRange: 1,
     midrange: 1,
     longRange: 1,

@@ -10,9 +10,11 @@ router.get('/', function(req, res, next) {
 
 /* GET weapons route */
 router.get('/weapons', function(req, res, next) {
-  
+
   // Get weapons from database and send them to /loot/weapons route to be displayed on weapons.ejs
-  Weapon.find({}, function (err, weapons) {
+  // Sort by type then by name then by tier
+  Weapon.find({}, null, {sort: {type: 1, name: 1, tierValue: 1}}, function (err, weapons) {
+
     if (err) console.log(err); 
     else res.render('pages/weapons', { title: 'Fortnite | Weapons', active: 'loot', style: 'weapons', weapons: weapons });
   });

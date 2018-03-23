@@ -1,5 +1,6 @@
 @import './navigation.css';
 @import './path-widget.css';
+@import './rarity-backgrounds.css';
 
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -15,5 +16,9 @@ body {
   position: relative;
   width: 100%;
   padding-top: 25px;
+}
+
+.table tr {
+    cursor: pointer;
 }
 
