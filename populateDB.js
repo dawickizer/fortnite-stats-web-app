@@ -21,18 +21,16 @@ mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 mongoose.connection.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-// Test adding to DB
-// Testing.create({
-//     name: "Test",
-//     number: -1
-//   },
-//   function (err, small) {
-//     if (err) console.log(err);
-//     // saved!
-// });
-
-
 // WEAPONS *********************************************************************
+
+// Remove all weapon collections from DB
+Weapon.remove({}, function(err) {
+  if (err) {
+      console.log("Collection couldn't be removed" + err);
+      return;
+  }
+  console.log("Weapons removed");
+});
 
 // Create common assault-rifle-burst weapon document in Database
 Weapon.create({
@@ -3124,6 +3122,3 @@ Weapon.create({
     if (err) console.log(err);
     // saved!
 });
-
-
-
