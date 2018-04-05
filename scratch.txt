@@ -71,13 +71,11 @@ chestLootChance: num
 
 
 
-Name of weapon
-Common
-Uncommon 
-Rare
-Epic
-Legendary
-Body Damage
-Head Damage
-Reload Time
-Magazine Size
+Quick Info
+Spread
+Range
+Damage
+Env Damage
+Impact Damage
+Recoil 
+Loot Chance

@@ -1,5 +1,6 @@
 @import './navigation.css';
 @import './path-widget.css';
+@import './rarity-backgrounds.css';
 
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -15,5 +16,23 @@ body {
   position: relative;
   width: 100%;
   padding-top: 25px;
+}
+
+.panel {
+  padding-bottom: 25px;
+}
+
+.panel-title {
+  background-color: #2a2a2a;
+  padding: 9px;
+}
+
+.panel-content {
+  background-color: rgba(1, 1, 1, .5);
+  padding: 15px;
+}
+
+.gray-text {
+  color: rgba(144, 154, 165, .8);
 }
 

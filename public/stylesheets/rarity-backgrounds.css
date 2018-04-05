@@ -42,3 +42,9 @@
     background-image: radial-gradient(#d27bf4 0%,#7907a5 100%);
     padding: 8px;
 }
+
+.rarity-background_small {
+    border-width: 2px !important;
+    padding: 2px !important;
+}
+
