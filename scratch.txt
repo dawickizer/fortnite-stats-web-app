@@ -67,3 +67,15 @@ Loot Chance
 --------------------
 floorLootChance: num
 chestLootChance: num
+
+
+
+
+Quick Info
+Spread
+Range
+Damage
+Env Damage
+Impact Damage
+Recoil 
+Loot Chance

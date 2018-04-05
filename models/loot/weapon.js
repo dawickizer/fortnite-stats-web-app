@@ -5,9 +5,11 @@ var Schema = mongoose.Schema;
 var WeaponSchema = new Schema(
   {
     image: {type: String, required: true},
+    fullName: {type: String, required: true},
     name: {type: String, required: true},
     type: {type: String, required: true},
     tier: {type: String, required: true},
+    tierValue: {type: Number, required: true},
     closeRange: {type: Number, required: true},
     midrange: {type: Number, required: true},
     longRange: {type: Number, required: true},
@@ -52,6 +54,13 @@ var WeaponSchema = new Schema(
     supplyDropLootChance: {type: Number, required: true}
   }
 );
+
+// Virtual for weapon's full name **** CAUSES DIFFICULTIES WHEN ROUTING *****
+// WeaponSchema
+// .virtual('fullName')
+// .get(function () {
+//   return this.name + "-" + this.tier;
+// });
 
 //Export model
 module.exports = mongoose.model('Weapon', WeaponSchema);

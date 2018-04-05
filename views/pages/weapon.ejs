@@ -1,0 +1,205 @@
+<% include ../partials/header %>
+<% include ../partials/navigation %>
+
+<!-- Path widget at top of page-->
+<div id="path" class="container">
+  <div class="path">
+  <a href="/">Home</a>  / <a href="/loot">Loot</a> / <a href="/loot/weapons">Weapons</a> / <a id="path-active" href="/loot/weapons/<%= weapon.fullName %>"><%= weapon.fullName %></a>
+  </div>
+</div>
+
+<!-- Container element -->
+<div class="container">
+  <div class="panel">
+    <div class="panel-title">Quick Stats</div>
+    <div class="panel-content">
+      <div class="quick">
+        <div class="row">
+          <div class="col-md-2">
+            <img class="rarity-background_<%= weapon.tier %>" src="<%= weapon.image %>" class="img-fluid" alt="<%= weapon.fullName %>">
+          </div>
+          <div class="col-md-10">
+            <br>
+            <span class="gray-text">Damage (Head):</span> <span style="padding-left: 8px;"><%= weapon.headDamageClose %></span><br>
+            <span class="gray-text">Damage (Body):</span> <span style="padding-left: 10px;"><%= weapon.bodyDamageClose %></span><br>
+            <span class="gray-text">DPS:</span> <span style="padding-left: 86px;"><%= weapon.damagePerSecond %></span><br>
+            <span class="gray-text">Magazine Size:</span> <span style="padding-left: 15px;"><%= weapon.magazineSize %></span><br>
+            <span class="gray-text">Reload Time:</span> <span style="padding-left: 28px;"><%= weapon.reloadTime %></span><br>
+            <span class="gray-text">Fire Rate:</span> <span style="padding-left: 53px;"><%= weapon.fireRate %></span>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+  
+  <div class="panel">
+    <div class="panel-title">Spread</div>
+    <div class="panel-content">
+      
+      <div class="spread">
+        <div class="row">
+          <div class="col-md">
+            <span class="gray-text">Base:</span> <br><%= weapon.baseSpread %>
+          </div>
+          <div class="col-md">
+            <span class="gray-text">Downsights:</span> <br> *<%= weapon.adsSpread %>
+          </div>
+          <div class="col-md">
+            <span class="gray-text">Standing Still:</span> <br> *<%= weapon.standingSpread %>
+          </div>
+          <div class="col-md">
+            <span class="gray-text">Crouching:</span> <br> *<%= weapon.crouchingSpread%>
+          </div>
+          <div class="col-md">
+            <span class="gray-text">Sprinting:</span> <br> *<%= weapon.sprintSpread %>
+          </div>
+          <div class="col-md">
+            <span class="gray-text">Jumping/Falling:</span> <br> *<%= weapon.fallingJumpingSpread %>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+  
+  <div class="panel">
+    <div class="panel-title">Recoil</div>
+    <div class="panel-content">
+      <div class="recoil">
+        <div class="row">
+          <div class="col-lg">
+            <span class="gray-text">Horizontal:</span> <br><%= weapon.horizontalRecoil %>
+          </div>
+          <div class="col-lg">
+            <span class="gray-text">Horizontal Gamepad:</span> <br> *<%= weapon.horizontalRecoilGamepad %>
+          </div>
+          <div class="col-lg">
+            <span class="gray-text">Vertical:</span> <br><%= weapon.verticalRecoil %>
+          </div>
+          <div class="col-lg">
+            <span class="gray-text">Vertical Gamepad:</span> <br> *<%= weapon.verticalRecoilGamepad %>
+          </div>
+          <div class="col-lg">
+            <span class="gray-text">Angle Max:</span> <br><%= weapon.angleMax %>
+          </div>
+          <div class="col-lg">
+            <span class="gray-text">Angle Min:</span> <br><%= weapon.angleMin %>
+          </div>
+          <div class="col-lg">
+            <span class="gray-text">Downsights:</span> <br> *<%= weapon.adsRecoil %>
+          </div>
+          <div class="col-lg">
+            <span class="gray-text">InterpSpeed:</span> <br><%= weapon.interpSpeed %>
+          </div>
+          <div class="col-lg">
+            <span class="gray-text">InterpSpeed Recovery:</span> <br><%= weapon.interpSpeedRecovery %>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+  
+  <div class="panels">
+    <div class="row">
+      <div class="col-lg">
+        <div class="panel">
+          <div class="panel-title">Damage</div>
+          <div class="panel-content">
+            <div class="damage">
+              <div class="row">
+                <div class="col-lg">
+                  <span class="gray-text">Close Range:</span> <br><%= weapon.bodyDamageClose %> (<%= weapon.headDamageClose %>)
+                </div>
+                <div class="col-lg">
+                  <span class="gray-text">Mid Range:</span> <br><%= weapon.bodyDamageMid %> (<%= weapon.headDamageMid %>)
+                </div>
+                <div class="col-lg">
+                  <span class="gray-text">Long Range:</span> <br><%= weapon.bodyDamageLong %> (<%= weapon.headDamageLong %>)
+                </div>
+                <div class="col-lg">
+                  <span class="gray-text">Max Range:</span> <br><%= weapon.bodyDamageMax %> (<%= weapon.headDamageMax %>)
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>            
+      </div>
+      <div class="col-lg">
+        <div class="panel">
+          <div class="panel-title">Range</div>
+          <div class="panel-content">
+            <div class="damage">
+              <div class="row">
+                <div class="col-lg">
+                  <span class="gray-text">Close Range:</span> <br><%= weapon.closeRange %>
+                </div>
+                <div class="col-lg">
+                  <span class="gray-text">Mid Range:</span> <br><%= weapon.midrange %>
+                </div>
+                <div class="col-lg">
+                  <span class="gray-text">Long Range:</span> <br><%= weapon.longRange %>
+                </div>
+                <div class="col-lg">
+                  <span class="gray-text">Max Range:</span> <br><%= weapon.maxRange %>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+    </div>            
+  </div>
+  
+  <div class="panels">
+    <div class="row">
+      <div class="col-lg">
+        <div class="panel">
+          <div class="panel-title">Environmental Damage</div>
+          <div class="panel-content">
+            <div class="damage">
+              <div class="row">
+                <div class="col-lg">
+                  <span class="gray-text">Close Range:</span> <br><%= weapon.environmentalDamageClose %>
+                </div>
+                <div class="col-lg">
+                  <span class="gray-text">Mid Range:</span> <br><%= weapon.environmentalDamageMid %>
+                </div>
+                <div class="col-lg">
+                  <span class="gray-text">Long Range:</span> <br><%= weapon.environmentalDamageLong %>
+                </div>
+                <div class="col-lg">
+                  <span class="gray-text">Max Range:</span> <br><%= weapon.environmentalDamageMax %>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>            
+      </div>
+      <div class="col-lg">
+        <div class="panel">
+          <div class="panel-title">Impact Damage</div>
+          <div class="panel-content">
+            <div class="damage">
+              <div class="row">
+                <div class="col-lg">
+                  <span class="gray-text">Close Range:</span> <br><%= weapon.impactDamageClose %>
+                </div>
+                <div class="col-lg">
+                  <span class="gray-text">Mid Range:</span> <br><%= weapon.impactDamageMid %>
+                </div>
+                <div class="col-lg">
+                  <span class="gray-text">Long Range:</span> <br><%= weapon.impactDamageLong %>
+                </div>
+                <div class="col-lg">
+                  <span class="gray-text">Max Range:</span> <br><%= weapon.impactDamageMax %>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+    </div>            
+  </div>
+  
+</div>
+
+<% include ../partials/footer %>
+
+

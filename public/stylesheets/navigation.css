@@ -1,13 +1,10 @@
-body {
+.navbar {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-image: url("https://i.kinja-img.com/gawker-media/image/upload/t_original/eydhq5o0navgbajua3my.png");
-  background-size: cover;
-  color : white;
+  color: white;
 }
 
-/* Navbar customizations */
 .bg-light { 
-    background-color: #2a2a2a !important;
+  background-color: #2a2a2a !important;
 }
 
 .btn-outline-success {
@@ -24,15 +21,13 @@ body {
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #ccc;
+  color: #ccc;
 }
 
 .navbar-light .navbar-nav .active>.nav-link {
-    color: #c272d9;
+  color: #c272d9;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-    color: #c272d9;
+  color: #c272d9;
 }
-
-

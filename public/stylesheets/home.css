@@ -1,0 +1,14 @@
+@import './navigation.css';
+@import './path-widget.css';
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color : white;
+  background-image: linear-gradient(to bottom,rgba(0,0,0,.4),rgba(0,0,0,.8) 405px), url("/images/background/tilted-towers-drop.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+

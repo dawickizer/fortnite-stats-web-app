@@ -1,8 +1,51 @@
 <% include ../partials/header %>
 <% include ../partials/navigation %>
-<p>This is the /loot/weapons page</p>
-<% for (var i = 0; i < weapons.length; i ++) { %>
-    <%= weapons[i].name + " " + weapons[i].tier %>
-    </br> 
-<% } %>
+
+<!-- Path widget at top of page-->
+<div class="container">
+  <div class="path">
+  <a href="/">Home</a> / <a href="/loot">Loot</a> / <a id="path-active" href="/loot/weapons">Weapons</a>
+  </div>
+</div>
+
+<div class="container">
+<table class="table table-striped table-dark table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Weapon</th>
+      <th scope="col">Name</th>
+      <th scope="col">Damage (Head)</th>
+      <th scope="col">Damage (Body)</th>
+      <th scope="col">Damage Per Second</th>
+      <th scope="col">Magazine Size</th>
+      <th scope="col">Reload Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for (var i = 0; i < weapons.length; i ++) { %>
+      <tr class='clickable-row' data-href="/loot/weapons/<%= weapons[i].fullName %>">
+        <th scope="row"><img class="rarity-background_<%= weapons[i].tier %>" src="<%= weapons[i].image %>" class="img-fluid" alt="<%= weapons[i].fullName %>"></th>
+        <td><%= weapons[i].fullName %></td>
+        <td style="color: yellow"><%=weapons[i].headDamageClose %></td> 
+        <td><%=weapons[i].bodyDamageClose %></td> 
+        <td><%=weapons[i].damagePerSecond %></td> 
+        <td><%=weapons[i].magazineSize %></td> 
+        <td><%=weapons[i].reloadTime %></td> 
+      </tr>
+    <% } %> 
+  </tbody>
+</table>
+</div>
+
+
 <% include ../partials/footer %>
+
+<script>
+  jQuery(document).ready(function($) {
+    $(".clickable-row").click(function() {
+        window.location = $(this).data("href");
+    });
+  });
+</script>
+
+

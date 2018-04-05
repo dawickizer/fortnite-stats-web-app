@@ -1,3 +1,46 @@
 <% include ../partials/header %>
 <% include ../partials/navigation %>
+
+<!-- Path widget at top of page-->
+<div id="path" class="container">
+  <div class="path">
+  <a href="/">Home</a> / <a id="path-active" href="/loot">Loot</a>
+  </div>
+</div>
+
+<!-- Grid system for different loot categories -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3">
+      <img src="/images/weapons/assault-rifle-scar.png" alt="assault-rifle-scar" class="image rarity-background_epic">
+      <div class="middle">
+        <a class="btn btn-light btn-lg" href="/loot/weapons" role="button">Weapons</a>
+      </div>     
+    </div>
+    <div class="col-lg-3">
+      <img src="/images/healing/slurp-juice.png" alt="slurp-juice" class="image rarity-background_epic">
+      <div class="middle">
+        <a class="btn btn-light btn-lg" href="/loot/healing" role="button">Healing</a>
+      </div>     
+    </div>
+    <div class="col-lg-3">
+      <img src="/images/specials/launch-pad.png" alt="launch-pad" class="image rarity-background_epic">
+      <div class="middle">
+        <a class="btn btn-light btn-lg" href="/loot/specials" role="button">Specials</a>
+      </div>     
+    </div>
+    <div class="col-lg-3">
+      <img src="/images/materials/wood.png" alt="wood" class="image rarity-background_epic">
+      <div class="middle">
+        <a class="btn btn-light btn-lg" href="/loot/materials" role="button">Materials</a>
+      </div>     
+    </div>
+  </div>
+</div>   
+  
 <% include ../partials/footer %>
+
+
+
+
+

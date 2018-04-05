@@ -5,23 +5,31 @@ var Weapon = require('../models/loot/weapon');
 
 /* GET loot listing. */
 router.get('/', function(req, res, next) {
-  res.render('pages/loot', { title: 'Fortnite | Loot', active: 'loot' });
+  res.render('pages/loot', { title: 'Fortnite | Loot', active: 'loot', style: 'loot' });
 });
 
 /* GET weapons route */
 router.get('/weapons', function(req, res, next) {
-  
+
   // Get weapons from database and send them to /loot/weapons route to be displayed on weapons.ejs
-  Weapon.find({}, function (err, weapons) {
+  // Sort by type then by name then by tier
+  Weapon.find({}, null, {sort: {type: 1, name: 1, tierValue: 1}}, function (err, weapons) {
+
     if (err) console.log(err); 
-    else res.render('pages/weapons', { title: 'Fortnite | Weapons', active: 'loot', weapons: weapons });
+    else res.render('pages/weapons', { title: 'Fortnite | Weapons', active: 'loot', style: 'weapons', weapons: weapons });
   });
 });
 
 /* GET weapons/:weaponName listing. */
-router.get('/weapons/:weaponName', function(req, res, next) {
+router.get('/weapons/:name', function(req, res, next) {
+  
   console.log(req.params);
-  res.send('This is the loot/weapons/' + req.params.weaponName + ' page!');
+
+  // Find weapon with fullName matching req.params.name
+  Weapon.findOne({ 'fullName': req.params.name }, function (err, weapon) {
+    if (err) console.log(err);
+    else res.render('pages/weapon', { title: 'Fortnite | ' + req.params.name, active: 'loot', style: 'weapon', weapon: weapon });
+  });
 });
 
 
