@@ -1,0 +1,14 @@
+<% include ../partials/header %>
+<% include ../partials/navigation %>
+
+<!-- Path widget at top of page-->
+<div id="path" class="container">
+  <div class="path">
+  <a href="/">Home</a>  / <a href="/loot">Loot</a> / <a href="/loot/materials">Materials</a> / <a id="path-active" href="/loot/materials/<%= material.name %>"><%= material.name %></a>
+  </div>
+</div>
+
+
+<% include ../partials/footer %>
+
+

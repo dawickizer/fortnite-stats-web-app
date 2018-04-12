@@ -1,0 +1,78 @@
+@import './navigation.css';
+@import './path-widget.css';
+@import './rarity-backgrounds.css';
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color : white;
+  background-image: linear-gradient(to bottom,rgba(0,0,0,.4),rgba(0,0,0,.8) 405px), url("/images/background/fortnite-battle.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  padding-top: 25px;
+}
+
+.panel {
+  padding-bottom: 25px;
+}
+
+.panel-title {
+  background-color: #2a2a2a;
+  padding: 9px;
+}
+
+.panel-content {
+  background-color: rgba(1, 1, 1, .5);
+  padding: 15px;
+}
+
+.gray-text {
+  color: rgba(144, 154, 165, .8);
+}
+
+.card-header {
+    background-color: #2a2a2a;
+}
+
+.btn-link {
+    font-weight: 400;
+    color: #fff;
+    background-color: transparent;
+}
+
+.btn-link:hover {
+    color: #c272d9;
+    text-decoration: underline;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 0;
+}
+
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #c272d9;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}

@@ -1,0 +1,54 @@
+<% include ../partials/header %>
+<% include ../partials/navigation %>
+
+<!-- Path widget at top of page-->
+<div class="container">
+  <div class="path">
+  <a href="/">Home</a> / <a href="/loot">Loot</a> / <a id="path-active" href="/loot/materials">Materials</a>
+  </div>
+</div>
+
+<div class="container">
+
+<a class="btn btn-primary" href="/loot/materials/material-edits" role="button">Click here to view all material edits when building</a>
+
+<table class="table table-striped table-dark table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Material</th>
+      <th scope="col">Name</th>
+      <th scope="col">Time to Build Wall</th>
+      <th scope="col">Time to Build Stairs</th>
+      <th scope="col">Time to Build Floor</th>
+      <th scope="col">Time to Build Roof</th>
+      <th scope="col">Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for (var i = 0; i < materials.length; i ++) { %>
+      <tr class='clickable-row' data-href="/loot/materials/<%= materials[i].name %>">
+        <th scope="row"><img class="rarity-background_<%= materials[i].tier %>" src="<%= materials[i].image %>" class="img-fluid" alt="<%= materials[i].name %>"></th>
+        <td><%= materials[i].name %></td>
+        <td><%=materials[i].timeToBuildWall %>s</td> 
+        <td><%=materials[i].timeToBuildStairs %>s</td> 
+        <td><%=materials[i].timeToBuildFloor %>s</td> 
+        <td><%=materials[i].timeToBuildRoof %>s</td> 
+        <td><%=materials[i].quantity %></td> 
+      </tr>
+    <% } %> 
+  </tbody>
+</table>
+</div>
+
+<% include ../partials/footer %>
+
+<script>
+  jQuery(document).ready(function($) {
+    $(".clickable-row").click(function() {
+        window.location = $(this).data("href");
+    });
+  });
+</script>
+
+
+
