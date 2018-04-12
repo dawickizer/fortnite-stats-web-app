@@ -1,0 +1,43 @@
+<% include ../partials/header %>
+<% include ../partials/navigation %>
+
+<!-- Path widget at top of page-->
+<div id="path" class="container">
+  <div class="path">
+  <a href="/">Home</a>  / <a href="/loot">Loot</a> / <a href="/loot/healing">Healing</a> / <a id="path-active" href="/loot/healing/<%= healing_item.name %>"><%= healing_item.name %></a>
+  </div>
+</div>
+
+<!-- Container element -->
+<div class="container">
+  <div class="panel">
+    <div class="panel-title">Quick Stats</div>
+    <div class="panel-content">
+      <div class="quick">
+        <div class="row">
+          <div class="col-md-2">
+            <img class="rarity-background_<%= healing_item.tier %>" src="<%= healing_item.image %>" class="img-fluid" alt="<%= healing_item.name %>">
+          </div>
+          <div class="col-md-3">
+            <br>
+            <span class="gray-text">Health Restored:</span> <span style="padding-left: 17px;"><%= healing_item.healthRestored %>%</span><br>
+            <span class="gray-text">Shield Restored:</span> <span style="padding-left: 20px;"><%= healing_item.shieldRestored %>%</span><br>
+            <span class="gray-text">Time to Consume:</span> <span style="padding-left: 5px;"><%= healing_item.timeToConsume %>s</span><br>
+            <span class="gray-text">Time to Heal:</span> <span style="padding-left: 39px;"><%= healing_item.timeToHeal %>s</span><br>
+            <span class="gray-text">Health Limit:</span> <span style="padding-left: 43px;"><%= healing_item.healthLimit %>%</span><br>
+            <span class="gray-text">Shield Limit:</span> <span style="padding-left: 46px;"><%= healing_item.shieldLimit %>%</span><br>
+            <span class="gray-text">Quantity:</span> <span style="padding-left: 67px;"><%= healing_item.quantity %></span>
+          </div>
+          <div class="col-md-7">
+            <br>
+            <%= healing_item.description %>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
+
+<% include ../partials/footer %>
+
+

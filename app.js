@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var seedDB = require("./seeds");
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -36,6 +37,9 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/loot', loot);
 app.use('/customizations', customizations);
+
+// Seed the database
+seedDB();
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,0 +1,51 @@
+<% include ../partials/header %>
+<% include ../partials/navigation %>
+
+<!-- Path widget at top of page-->
+<div class="container">
+  <div class="path">
+  <a href="/">Home</a> / <a href="/loot">Loot</a> / <a id="path-active" href="/loot/healing">Healing</a>
+  </div>
+</div>
+
+<div class="container">
+<table class="table table-striped table-dark table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Item</th>
+      <th scope="col">Name</th>
+      <th scope="col">Health Restored</th>
+      <th scope="col">Shield Restored</th>
+      <th scope="col">Time to Consume</th>
+      <th scope="col">Time to Heal</th>
+      <th scope="col">Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for (var i = 0; i < healing.length; i ++) { %>
+      <tr class='clickable-row' data-href="/loot/healing/<%= healing[i].name %>">
+        <th scope="row"><img class="rarity-background_<%= healing[i].tier %>" src="<%= healing[i].image %>" class="img-fluid" alt="<%= healing[i].fullName %>"></th>
+        <td><%= healing[i].name %></td>
+        <td style="color: #51ef51"><%=healing[i].healthRestored %>%</td> 
+        <td style="color: #34a4d4"><%=healing[i].shieldRestored %>%</td> 
+        <td><%=healing[i].timeToConsume %>s</td> 
+        <td><%=healing[i].timeToHeal %>s</td> 
+        <td><%=healing[i].quantity %></td> 
+      </tr>
+    <% } %> 
+  </tbody>
+</table>
+</div>
+
+
+<% include ../partials/footer %>
+
+<script>
+  jQuery(document).ready(function($) {
+    $(".clickable-row").click(function() {
+        window.location = $(this).data("href");
+    });
+  });
+</script>
+
+
