@@ -7,6 +7,7 @@ var Weapon = require('./models/loot/weapon');
 var Healing_Item = require('./models/loot/healing_item');
 var Material = require('./models/loot/material');
 var MaterialEdit = require('./models/loot/material_edit');
+var Miscellaneous_Item = require('./models/loot/miscellaneous_item');
 
 // Connect to database
 var mongoose = require('mongoose');
@@ -19,10 +20,173 @@ mongoose.connection.on('error', console.error.bind(console, 'MongoDB connection 
 // Seed database
 function seedDB() {
     
+    seedMiscellaneous()
     seedMaterials();
     seedMaterialEdits();
     seedHealing();
     seedWeapons();
+}
+
+// Seed materials
+function seedMiscellaneous() {
+    
+    // Remove all material collections from DB
+    Miscellaneous_Item.remove({}, function(err) {
+      if (err) {
+        console.log("Materials couldn't be removed" + err);
+        return;
+      }
+
+      // Create rare boogie-bomb miscellaneous document in Database
+      Miscellaneous_Item.create({
+          image: "/images/miscellaneous/boogie-bomb.png",
+          fullName: "boogie-bomb-rare",
+          name: "boogie-bomb",
+          type: "grenade",
+          tier: "rare",
+          tierValue: 2,
+          description: "Boogie Bomb is a Rare consumable explosive weapon in Battle Royale. The Boogie Bomb is thrown like a normal grenade, but any players inside the blast radius are forced to dance for 5 seconds or until damage is taken. Drops in stacks of 1 with a stack limit of 10. Can be found in treasure chests and supply drops. When boogie dancing, you are prevented from building, firing weapons, or using items.",
+        },
+      function (err, small) {
+        if (err) console.log(err);
+        // saved!
+      });
+      
+      // Create common grenade miscellaneous document in Database
+      Miscellaneous_Item.create({
+          image: "/images/miscellaneous/grenade.png",
+          fullName: "grenade-common",
+          name: "grenade",
+          type: "grenade",
+          tier: "common",
+          tierValue: 0,
+          description: "The grenade is a Common consumable explosive weapon in Battle Royale. Throwing it at an opponent deals explosive damage. The grenade is not cookable and has a set detination time once it is thrown.",
+        },
+      function (err, small) {
+        if (err) console.log(err);
+        // saved!
+      });
+      
+      // Create rare impulse-grenade miscellaneous document in Database
+      Miscellaneous_Item.create({
+          image: "/images/miscellaneous/impulse-grenade.png",
+          fullName: "impulse-grenade-rare",
+          name: "impulse-grenade",
+          type: "grenade",
+          tier: "rare",
+          tierValue: 2,
+          description: "The Impulse Grenade is a Rare consumable explosive weapon in Battle Royale. It can be thrown to launch enemies and the player themselves away from the point of impact.",
+        },
+      function (err, small) {
+        if (err) console.log(err);
+        // saved!
+      });
+      
+      // Create uncommon smoke-grenade miscellaneous document in Database
+      Miscellaneous_Item.create({
+          image: "/images/miscellaneous/smoke-grenade.png",
+          fullName: "smoke-grenade-uncommon",
+          name: "smoke-grenade",
+          type: "grenade",
+          tier: "uncommon",
+          tierValue: 1,
+          description: "The Smoke Grenade is an Uncommon consumable grenade in Battle Royale. It can be thrown to provide cover via smoke. Currently this item is no longer in the game.",
+        },
+      function (err, small) {
+        if (err) console.log(err);
+        // saved!
+      });
+      
+      // Create epic port-a-fort miscellaneous document in Database
+      Miscellaneous_Item.create({
+          image: "/images/miscellaneous/port-a-fort.png",
+          fullName: "port-a-fort-epic",
+          name: "port-a-fort",
+          type: "grenade",
+          tier: "epic",
+          tierValue: 3,
+          description: "The Port-a-Fort is an Epic consumable found in Battle Royale. Upon use on any surface, it builds a 3 tile tall structure out of Metal, with slopes and staircases arranged around the top for cover, as well as tires at the base of the internal fort.",
+        },
+      function (err, small) {
+        if (err) console.log(err);
+        // saved!
+      });
+      
+      // Create rare remote-explosive miscellaneous document in Database
+      Miscellaneous_Item.create({
+          image: "/images/miscellaneous/remote-explosive.png",
+          fullName: "remote-explosive-rare",
+          name: "remote-explosive",
+          type: "grenade",
+          tier: "rare",
+          tierValue: 2,
+          description: "Remote Explosives are a Rare consumable 'grenade' in Battle Royale. They can be placed and then detinated to cause exposive damage",
+        },
+      function (err, small) {
+        if (err) console.log(err);
+        // saved!
+      });
+
+      // Create legendary bush miscellaneous document in Database
+      Miscellaneous_Item.create({
+          image: "/images/miscellaneous/bush.png",
+          fullName: "bush-legendary",
+          name: "bush",
+          type: "item",
+          tier: "legendary",
+          tierValue: 4,
+          description: "The Bush is a Legendary item in Battle Royale. The Bush is a one-time use item that camouflages the player as an inconspicuous bush. It is destroyed if the player wearing it takes any damage, including damage from the storm. The Bush can only be found in chests and supply drops. The Bush doesn't automatically lie flat on the ground, you must crouch for the best camouflage.",
+        },
+      function (err, small) {
+        if (err) console.log(err);
+        // saved!
+      });
+      
+      // Create epic launch-pad miscellaneous document in Database
+      Miscellaneous_Item.create({
+          image: "/images/miscellaneous/launch-pad.png",
+          fullName: "launch-pad-epic",
+          name: "launch-pad",
+          type: "item",
+          tier: "epic",
+          tierValue: 3,
+          description: "The Launch Pad is an item available in Battle Royale. It is used to launch a player into the air to glide away from or over their enemies, or to outrun the storm before it kills you. Once deployed, the Launch Pad can be triggered by any player and has unlimited uses. It cannot be picked back up, but it can be destroyed like any other trap. Must be deployed on a floor surface.",
+        },
+      function (err, small) {
+        if (err) console.log(err);
+        // saved!
+      });
+      
+      // Create rare cozy-campfire miscellaneous document in Database
+      Miscellaneous_Item.create({
+          image: "/images/miscellaneous/cozy-campfire.png",
+          fullName: "cozy-campfire-rare",
+          name: "cozy-campfire",
+          type: "item",
+          tier: "rare",
+          tierValue: 2,
+          description: "A deployable item that heals allies in a 3x3 tile grid around the Campfire. Must be deployed on a flat surface that has a floor property. The Cozy Campfire item lasts for a total of 25 seconds and heals up to 2 HP per second, meaning that your teammates can all receive up to 50HP from the full campfires use.",
+        },
+      function (err, small) {
+        if (err) console.log(err);
+        // saved!
+      });
+      
+      // Create uncommon damage-trap miscellaneous document in Database
+      Miscellaneous_Item.create({
+          image: "/images/miscellaneous/damage-trap.png",
+          fullName: "damage-trap-uncommon",
+          name: "damage-trap",
+          type: "item",
+          tier: "uncommon",
+          tierValue: 1,
+          description: "The Damage Trap is an item available in Battle Royale. It combines the functions of the Spike Trap, Wall Zapper, and Ceiling Zapper into a single trap that can be placed on any surface that accepts traps. When this trap is in placement mode, it will automatically swap between floors, walls, and ceilings depending on where it is placed. Deals 125 damage.",
+        },
+      function (err, small) {
+        if (err) console.log(err);
+        // saved!
+      });
+    });
 }
 
 // Seed materials
@@ -3587,174 +3751,6 @@ function seedWeapons() {
             if (err) console.log(err);
             // saved!
         });
-        
-        // Create a common grenade document in database
-        Weapon.create({
-            image: "/images/weapons/grenade.png",
-            fullName: "grenade-common",
-            name: "grenade",
-            type: "grenade",
-            tier: "common",
-            tierValue: 0,
-            closeRange: 1,
-            midrange: 1,
-            longRange: 1,
-            maxRange: 25000,
-            damagePerSecond: 204,
-            bodyDamageClose: 17,
-            headDamageClose: 42.5,
-            bodyDamageMid: 17,
-            headDamageMid: 42.5,
-            bodyDamageLong: 17,
-            headDamageLong: 42.5,
-            bodyDamageMax: 17,
-            headDamageMax: 42.5,
-            impactDamageClose: 31,
-            impactDamageMid: 31,
-            impactDamageLong: 31,
-            impactDamageMax: 31,
-            environmentalDamageClose: 25,
-            environmentalDamageMid: 25,
-            environmentalDamageLong: 25,
-            environmentalDamageMax: 25,
-            baseSpread: .15,
-            sprintSpread: 1.5,
-            fallingJumpingSpread: 1.25,
-            adsSpread: .65,
-            standingSpread: .55,
-            crouchingSpread: .8,
-            horizontalRecoil: 0.25,
-            horizontalRecoilGamepad: 1,
-            verticalRecoil: 3.15,
-            verticalRecoilGamepad: .5,
-            angleMax: 25,
-            angleMin: -25,
-            adsRecoil: .5,
-            interpSpeed: 12,
-            interpSpeedRecovery: 6,
-            fireRate: 12,
-            reloadTime: 4.5,
-            magazineSize: 0,
-            floorLootChance: .333,
-            chestLootChance: .333,
-            supplyDropLootChance: 0
-          },
-          function (err, small) {
-            if (err) console.log(err);
-            // saved!
-        });
-        
-        // Create a rare boogie-bomb document in database
-        Weapon.create({
-            image: "/images/weapons/boogie-bomb.png",
-            fullName: "boogie-bomb-rare",
-            name: "boogie-bomb",
-            type: "grenade",
-            tier: "rare",
-            tierValue: 2,
-            closeRange: 1,
-            midrange: 1,
-            longRange: 1,
-            maxRange: 25000,
-            damagePerSecond: 204,
-            bodyDamageClose: 17,
-            headDamageClose: 42.5,
-            bodyDamageMid: 17,
-            headDamageMid: 42.5,
-            bodyDamageLong: 17,
-            headDamageLong: 42.5,
-            bodyDamageMax: 17,
-            headDamageMax: 42.5,
-            impactDamageClose: 31,
-            impactDamageMid: 31,
-            impactDamageLong: 31,
-            impactDamageMax: 31,
-            environmentalDamageClose: 25,
-            environmentalDamageMid: 25,
-            environmentalDamageLong: 25,
-            environmentalDamageMax: 25,
-            baseSpread: .15,
-            sprintSpread: 1.5,
-            fallingJumpingSpread: 1.25,
-            adsSpread: .65,
-            standingSpread: .55,
-            crouchingSpread: .8,
-            horizontalRecoil: 0.25,
-            horizontalRecoilGamepad: 1,
-            verticalRecoil: 3.15,
-            verticalRecoilGamepad: .5,
-            angleMax: 25,
-            angleMin: -25,
-            adsRecoil: .5,
-            interpSpeed: 12,
-            interpSpeedRecovery: 6,
-            fireRate: 12,
-            reloadTime: 4.5,
-            magazineSize: 0,
-            floorLootChance: .333,
-            chestLootChance: .333,
-            supplyDropLootChance: 0
-          },
-          function (err, small) {
-            if (err) console.log(err);
-            // saved!
-        });
-        
-        // Create a rare impulse-grenade document in database
-        Weapon.create({
-            image: "/images/weapons/impulse-grenade.png",
-            fullName: "impulse-grenade-rare",
-            name: "impulse-grenade",
-            type: "grenade",
-            tier: "rare",
-            tierValue: 2,
-            closeRange: 1,
-            midrange: 1,
-            longRange: 1,
-            maxRange: 25000,
-            damagePerSecond: 204,
-            bodyDamageClose: 17,
-            headDamageClose: 42.5,
-            bodyDamageMid: 17,
-            headDamageMid: 42.5,
-            bodyDamageLong: 17,
-            headDamageLong: 42.5,
-            bodyDamageMax: 17,
-            headDamageMax: 42.5,
-            impactDamageClose: 31,
-            impactDamageMid: 31,
-            impactDamageLong: 31,
-            impactDamageMax: 31,
-            environmentalDamageClose: 25,
-            environmentalDamageMid: 25,
-            environmentalDamageLong: 25,
-            environmentalDamageMax: 25,
-            baseSpread: .15,
-            sprintSpread: 1.5,
-            fallingJumpingSpread: 1.25,
-            adsSpread: .65,
-            standingSpread: .55,
-            crouchingSpread: .8,
-            horizontalRecoil: 0.25,
-            horizontalRecoilGamepad: 1,
-            verticalRecoil: 3.15,
-            verticalRecoilGamepad: .5,
-            angleMax: 25,
-            angleMin: -25,
-            adsRecoil: .5,
-            interpSpeed: 12,
-            interpSpeedRecovery: 6,
-            fireRate: 12,
-            reloadTime: 4.5,
-            magazineSize: 0,
-            floorLootChance: .333,
-            chestLootChance: .333,
-            supplyDropLootChance: 0
-          },
-          function (err, small) {
-            if (err) console.log(err);
-            // saved!
-        });     
     });
 }
 

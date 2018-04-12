@@ -5,6 +5,7 @@ var Weapon = require('../models/loot/weapon');
 var Material = require('../models/loot/material');
 var Material_Edit = require('../models/loot/material_edit');
 var Healing_Item = require('../models/loot/healing_item');
+var Miscellaneous_Item = require('../models/loot/miscellaneous_item');
 
 /* GET loot listing. */
 router.get('/', function(req, res, next) {
@@ -66,13 +67,19 @@ router.get('/healing/:name', function(req, res, next) {
 });
 
 
-// SPECIALS ROUTES ***************************************************************************************************
+// Miscellaneous ROUTES ***************************************************************************************************
 
 /* GET specials route */
-router.get('/specials', function(req, res, next) {
-  res.render('pages/specials', { title: 'Fortnite | Specials', active: 'loot', style: 'specials'});
-});
+router.get('/miscellaneous', function(req, res, next) {
 
+  // Get miscellaneous from database and send them to /loot/miscellaneous route to be displayed on miscellaneous.ejs
+  // Sort by type then by tier then by name
+  Miscellaneous_Item.find({}, null, {sort: {type: 1, tierValue: 1, name: 1}}, function (err, miscellaneous) {
+
+    if (err) console.log(err); 
+    else res.render('pages/miscellaneous', { title: 'Fortnite | Miscellaneous', active: 'loot', style: 'miscellaneous', miscellaneous: miscellaneous });
+  });  
+});
 
 
 
