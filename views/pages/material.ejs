@@ -8,6 +8,136 @@
   </div>
 </div>
 
+<!-- Container element -->
+<div class="container">
+  <div class="panel">
+    <div class="panel-title">Quick Stats</div>
+    <div class="panel-content">
+      <div class="quick">
+        <div class="row">
+          <div class="col-md-2">
+            <img class="rarity-background_<%= material.tier %>" src="<%= material.image %>" class="img-fluid" alt="<%= material.name %>">
+          </div>
+          <div class="col-md-2">
+            <br>
+            <br>
+            <span class="gray-text">Quantity:</span> <span style="padding-left: 54px;"><%= material.quantity %></span><br>
+            <span class="gray-text">Needed to build:</span> <span style="padding-left: 3px;"><%= material.neededToBuild %></span><br>
+          </div>
+          <div class="col-md-8">
+            <br>
+            <br>
+            <%= material.description %>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">Wall Stats</div>
+    <div class="panel-content">
+      
+      <div class="spread">
+        <div class="row">
+          <div class="col-md">
+            <span class="gray-text">Time to Build:</span> <br><%= material.timeToBuildWall %>
+          </div>
+          <div class="col-md">
+            <span class="gray-text">HP When Placed:</span> <br> <%= material.hpWhenPlacedWall %>
+          </div>
+          <div class="col-md">
+            <span class="gray-text">HP When Built:</span> <br> <%= material.hpWhenBuiltWall %>
+          </div>
+          <div class="col-md">
+            <span class="gray-text">HP Per Tick:</span> <br> +<%= material.hpPerTickWall %>
+          </div>
+          <div class="col-md">
+            <span class="gray-text">Number of Ticks:</span> <br> <%= material.numTicksWall %>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">Stairs Stats</div>
+    <div class="panel-content">
+      
+      <div class="spread">
+        <div class="row">
+          <div class="col-md">
+            <span class="gray-text">Time to Build:</span> <br><%= material.timeToBuildStairs %>
+          </div>
+          <div class="col-md">
+            <span class="gray-text">HP When Placed:</span> <br> <%= material.hpWhenPlacedStairs %>
+          </div>
+          <div class="col-md">
+            <span class="gray-text">HP When Built:</span> <br> <%= material.hpWhenBuiltStairs %>
+          </div>
+          <div class="col-md">
+            <span class="gray-text">HP Per Tick:</span> <br> +<%= material.hpPerTickStairs %>
+          </div>
+          <div class="col-md">
+            <span class="gray-text">Number of Ticks:</span> <br> <%= material.numTicksStairs %>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+  
+  <div class="panel">
+    <div class="panel-title">Floor Stats</div>
+    <div class="panel-content">
+      
+      <div class="spread">
+        <div class="row">
+          <div class="col-md">
+            <span class="gray-text">Time to Build:</span> <br><%= material.timeToBuildFloor %>
+          </div>
+          <div class="col-md">
+            <span class="gray-text">HP When Placed:</span> <br> <%= material.hpWhenPlacedFloor %>
+          </div>
+          <div class="col-md">
+            <span class="gray-text">HP When Built:</span> <br> <%= material.hpWhenBuiltFloor %>
+          </div>
+          <div class="col-md">
+            <span class="gray-text">HP Per Tick:</span> <br> +<%= material.hpPerTickFloor %>
+          </div>
+          <div class="col-md">
+            <span class="gray-text">Number of Ticks:</span> <br> <%= material.numTicksFloor %>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+  
+  <div class="panel">
+    <div class="panel-title">Roof Stats</div>
+    <div class="panel-content">
+      
+      <div class="spread">
+        <div class="row">
+          <div class="col-md">
+            <span class="gray-text">Time to Build:</span> <br><%= material.timeToBuildRoof %>
+          </div>
+          <div class="col-md">
+            <span class="gray-text">HP When Placed:</span> <br> <%= material.hpWhenPlacedRoof %>
+          </div>
+          <div class="col-md">
+            <span class="gray-text">HP When Built:</span> <br> <%= material.hpWhenBuiltRoof %>
+          </div>
+          <div class="col-md">
+            <span class="gray-text">HP Per Tick:</span> <br> +<%= material.hpPerTickRoof %>
+          </div>
+          <div class="col-md">
+            <span class="gray-text">Number of Ticks:</span> <br> <%= material.numTicksRoof %>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
 
 <% include ../partials/footer %>
 
