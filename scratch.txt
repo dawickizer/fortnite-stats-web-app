@@ -1,3 +1,15 @@
+TO DO: LOOT ROUTE
+------------------
+Update weapon stats/provide weapon descriptions
+Update crossbow picture
+Update materials timeToBuild stats
+
+
+
+
+
+
+
 Weapon
 -----------
 

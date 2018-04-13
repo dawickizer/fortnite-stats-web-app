@@ -74,7 +74,7 @@ router.get('/miscellaneous', function(req, res, next) {
 
   // Get miscellaneous from database and send them to /loot/miscellaneous route to be displayed on miscellaneous.ejs
   // Sort by type then by tier then by name
-  Miscellaneous_Item.find({}, null, {sort: {type: 1, tierValue: 1, name: 1}}, function (err, miscellaneous) {
+  Miscellaneous_Item.find({}, null, {sort: {tierValue: 1, type: 1, name: 1}}, function (err, miscellaneous) {
 
     if (err) console.log(err); 
     else res.render('pages/miscellaneous', { title: 'Fortnite | Miscellaneous', active: 'loot', style: 'miscellaneous', miscellaneous: miscellaneous });
