@@ -1,0 +1,46 @@
+@import './navigation.css';
+@import './path-widget.css';
+
+body {
+  background-image: linear-gradient(to bottom,rgba(0,0,0,.4),rgba(0,0,0,.8) 405px), url("/images/background/fortnite-battle.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  padding-top: 25px;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.col-lg-3:hover .image {
+  opacity: 0.3;
+}
+
+.col-lg-3:hover .middle {
+  opacity: 1;
+}
+
+
